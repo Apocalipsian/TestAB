@@ -40,5 +40,23 @@ namespace OkazjeInfo
             sortowanie sort = new sortowanie();
             sort.Show();
         }
+
+        private void uRLEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            urls url = new urls();
+            url.Show();
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            scraper sc = new scraper();
+            sc.Show();
+        }
+
+        private void dToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            duplikaty multi = new duplikaty();
+            multi.Show();
+        }
     }
 }

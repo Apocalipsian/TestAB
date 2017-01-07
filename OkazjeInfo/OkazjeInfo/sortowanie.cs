@@ -34,6 +34,11 @@ namespace OkazjeInfo
             foreach (var url in sortUrls)
             {
                 driver = methods.getUrl(url, driver);
+                
+                
+              //  int webCount = Convert.ToInt16(driver.FindElement(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/a")).Text);
+
+
 
                 if (driver.Url.Contains("#sort,cena_desc") == false && driver.Url.Contains("#sort,cena") == false)
                 {
@@ -43,10 +48,45 @@ namespace OkazjeInfo
                         driver.Navigate().Refresh();
                     else
                         driver.Url = driver.Url;
+
+                    do
+                    {
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+
+                        try
+                        {
+                            driver.FindElement(By.XPath("//*[@id='offersIndicator']"));
+                        }
+                        catch
+                        {
+                            exceptionthrown = true;
+                        }
+
+                    } while (!exceptionthrown);
+
+                    exceptionthrown = false;
                 }
 
                 for (int k = 0; k < 2; k++)
                 {
+
+                    do
+                    {
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+
+                        try
+                        {
+                            driver.FindElement(By.XPath("//*[@id='offersIndicator']"));
+                        }
+                        catch
+                        {
+                            exceptionthrown = true;
+                        }
+
+                    } while (!exceptionthrown);
+
+                    exceptionthrown = false;
+
                     while (!exceptionthrown)
                     {
                         try
@@ -91,6 +131,24 @@ namespace OkazjeInfo
                             else
                                 driver.Url = driver.Url;
 
+
+                            do
+                            {
+                                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+
+                                try
+                                {
+                                    driver.FindElement(By.XPath("//*[@id='offersIndicator']"));
+                                }
+                                catch
+                                {
+                                    exceptionthrown = true;
+                                }
+
+                            } while (!exceptionthrown);
+
+                            exceptionthrown = false;
+
                         }
                     }
                     else
@@ -116,7 +174,27 @@ namespace OkazjeInfo
                             if (driver.Url.Contains("okazje.info.pl"))
                                 driver.Navigate().Refresh();
                             else
+                            {
                                 driver.Url = driver.Url;
+                               
+                            }
+
+                            do
+                            {
+                                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+
+                                try
+                                {
+                                    driver.FindElement(By.XPath("//*[@id='offersIndicator']"));
+                                }
+                                catch
+                                {
+                                    exceptionthrown = true;
+                                }
+
+                            } while (!exceptionthrown);
+
+                            exceptionthrown = false;
                         }
                     }
 

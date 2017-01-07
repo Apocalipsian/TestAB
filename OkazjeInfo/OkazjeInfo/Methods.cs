@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Npgsql;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.PhantomJS;
 using OpenQA.Selenium.Support.UI;
@@ -14,14 +15,21 @@ namespace OkazjeInfo
 {
     public class Methods
     {
+        static NpgsqlConnection conn;
 
-        public IWebDriver getUrl(string url,IWebDriver driver)
+        public IWebDriver getUrl(string url, IWebDriver driver)
         {
             if (driver == null)
                 driver = new PhantomJSDriver();
 
             driver.Url = url;
-             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(100));
+
+            //*[@id="offersIndicator"]
+       
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
+               // var t = driver.FindElement(By.XPath("//*[@id='offersIndicator']"));
+
+
 
             //  wait.Until(driver1 => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
 
@@ -29,21 +37,21 @@ namespace OkazjeInfo
             return driver;
         }
 
-        public  List<string> getUrlOfBox(RichTextBox box)
+        public List<string> getUrlOfBox(RichTextBox box)
         {
             List<string> listBox = new List<string>();
             box.Text = Regex.Replace(box.Text, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             listBox.AddRange((string[])box.Lines);
             try
             {
-                if (listBox[listBox.Count - 1] == "" && listBox.Count() !=0)
+                if (listBox[listBox.Count - 1] == "" && listBox.Count() != 0)
                     listBox.RemoveAt(listBox.Count - 1);
             }
             catch { }
             return listBox;
         }
 
-        public  void openFile(RichTextBox textBox)
+        public void openFile(RichTextBox textBox)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "Text|*.txt";
@@ -60,7 +68,7 @@ namespace OkazjeInfo
             }
         }
 
-        public static void saveFile(RichTextBox textBox)
+        public  void saveFile(RichTextBox textBox)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text|*.txt";
@@ -77,5 +85,39 @@ namespace OkazjeInfo
             }
         }
 
+        public RichTextBox conncetDatabase(string query, string baza,RichTextBox box)
+        {
+            box.Clear();
+
+            conn = new NpgsqlConnection(baza);
+            List<string> rekordy = new List<string>();
+            conn.Open();
+
+            NpgsqlCommand cmd2 = new NpgsqlCommand(query, conn);
+            try
+            {
+                using (NpgsqlDataReader dr2 = cmd2.ExecuteReader())
+                {
+                    while (dr2.Read())
+                    {
+                        rekordy.Add(dr2[0].ToString());
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            conn.Close();
+            conn.Dispose();
+
+            for (int i = 0; i < rekordy.Count; i++)
+            {
+                box.Text += rekordy[i] + "\n";
+            }
+
+            return box;
+        }
     }
 }

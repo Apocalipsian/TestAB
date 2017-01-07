@@ -69,12 +69,14 @@
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.cToolStripMenuItem.Text = "ILOSĆ PRODUKTÓW/SKLEP";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
             // dToolStripMenuItem
             // 
             this.dToolStripMenuItem.Name = "dToolStripMenuItem";
             this.dToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.dToolStripMenuItem.Text = "DUPLIKATY";
+            this.dToolStripMenuItem.Click += new System.EventHandler(this.dToolStripMenuItem_Click);
             // 
             // sORTOWANIEPRODUKTÓWToolStripMenuItem
             // 
@@ -109,6 +111,7 @@
             this.uRLEToolStripMenuItem.Name = "uRLEToolStripMenuItem";
             this.uRLEToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.uRLEToolStripMenuItem.Text = "URLE";
+            this.uRLEToolStripMenuItem.Click += new System.EventHandler(this.uRLEToolStripMenuItem_Click);
             // 
             // Form1
             // 
