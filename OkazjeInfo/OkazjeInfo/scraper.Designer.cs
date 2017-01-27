@@ -49,7 +49,7 @@
             // checkOneFile
             // 
             this.checkOneFile.AutoSize = true;
-            this.checkOneFile.Location = new System.Drawing.Point(66, 74);
+            this.checkOneFile.Location = new System.Drawing.Point(412, 16);
             this.checkOneFile.Name = "checkOneFile";
             this.checkOneFile.Size = new System.Drawing.Size(171, 17);
             this.checkOneFile.TabIndex = 22;
@@ -59,15 +59,15 @@
             // 
             // trunkUrl
             // 
-            this.trunkUrl.Location = new System.Drawing.Point(564, 15);
+            this.trunkUrl.Location = new System.Drawing.Point(542, 52);
             this.trunkUrl.Name = "trunkUrl";
-            this.trunkUrl.Size = new System.Drawing.Size(276, 20);
+            this.trunkUrl.Size = new System.Drawing.Size(202, 20);
             this.trunkUrl.TabIndex = 19;
             // 
             // compareTrunk
             // 
             this.compareTrunk.AutoSize = true;
-            this.compareTrunk.Location = new System.Drawing.Point(445, 17);
+            this.compareTrunk.Location = new System.Drawing.Point(412, 52);
             this.compareTrunk.Name = "compareTrunk";
             this.compareTrunk.Size = new System.Drawing.Size(124, 17);
             this.compareTrunk.TabIndex = 18;
@@ -80,9 +80,9 @@
             this.groupBox3.Controls.Add(this.checkCookie);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.cookieRichBox);
-            this.groupBox3.Location = new System.Drawing.Point(12, 121);
+            this.groupBox3.Location = new System.Drawing.Point(412, 107);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 222);
+            this.groupBox3.Size = new System.Drawing.Size(332, 222);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CIASTKA";
@@ -119,9 +119,9 @@
             // 
             // cookieRichBox
             // 
-            this.cookieRichBox.Location = new System.Drawing.Point(6, 44);
+            this.cookieRichBox.Location = new System.Drawing.Point(7, 44);
             this.cookieRichBox.Name = "cookieRichBox";
-            this.cookieRichBox.Size = new System.Drawing.Size(245, 123);
+            this.cookieRichBox.Size = new System.Drawing.Size(319, 123);
             this.cookieRichBox.TabIndex = 14;
             this.cookieRichBox.Text = "";
             // 
@@ -131,7 +131,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(12, 426);
+            this.button1.Location = new System.Drawing.Point(407, 436);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(257, 122);
             this.button1.TabIndex = 24;
@@ -141,7 +141,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(445, 514);
+            this.button3.Location = new System.Drawing.Point(12, 520);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(113, 43);
             this.button3.TabIndex = 27;
@@ -151,7 +151,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(564, 514);
+            this.button2.Location = new System.Drawing.Point(131, 520);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 43);
             this.button2.TabIndex = 26;
@@ -161,15 +161,15 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(445, 40);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 40);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(455, 468);
+            this.richTextBox1.Size = new System.Drawing.Size(372, 468);
             this.richTextBox1.TabIndex = 25;
             this.richTextBox1.Text = "";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(199, 29);
+            this.numericUpDown1.Location = new System.Drawing.Point(202, 13);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             200,
             0,
@@ -192,7 +192,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 31);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 13);
             this.label1.TabIndex = 29;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 570);
+            this.ClientSize = new System.Drawing.Size(759, 570);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button3);
@@ -214,7 +214,7 @@
             this.Controls.Add(this.trunkUrl);
             this.Controls.Add(this.compareTrunk);
             this.Name = "scraper";
-            this.Text = "scraper";
+            this.Text = "0";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

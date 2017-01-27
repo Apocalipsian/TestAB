@@ -26,7 +26,7 @@ namespace OkazjeInfo
         #region  GlobalVariable
         static IWebDriver driver;
         static string tittle = "";
-        static List<string> lista = new List<string>();
+        static public List<string> lista = new List<string>();
         static StringBuilder csvWrite = new StringBuilder();
         static public List<string> productIdList = new List<string>();
         public static List<string> listBox = new List<string>();
@@ -113,7 +113,7 @@ namespace OkazjeInfo
             if (listaAll == null)
                 listaAll = new List<string>();
 
-            List<string> lista = new List<string>();
+            lista = new List<string>();
 
             if (driver == null)
                 driver = new PhantomJSDriver();
@@ -126,19 +126,35 @@ namespace OkazjeInfo
             }
             tittle = tittle.Replace("najlepsze ceny", DateTime.Now.ToString("HH_mm_ss"));
 
-            var count = driver.FindElements(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/div[@class='wholePages']/a"));
+            var count = driver.FindElements(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/a")).Select(w => w.GetAttribute("innerHTML"));
+            var count2 = driver.FindElements(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/div[@class='wholePages']/a")).Select(w => w.GetAttribute("innerHTML"));
 
-            //if (count.Count >= 5)
-            // countWeb = 5;
-            // else
-            //   countWeb = count.Count + 1;
+            try
+            {
+                if (countWeb > Convert.ToInt16(count.FirstOrDefault()) && count.Count() > 0)
+                    countWeb = Convert.ToInt16(count.FirstOrDefault());
+            }
+            catch { }
+            //   var ttt = Convert.ToInt16(count2.Last());
+
+            try
+            {
+                if (countWeb > Convert.ToInt16(count2.Last()) && count2.Count() > 0)
+                    countWeb = Convert.ToInt16(count2.Last());
+            }
+            catch { }
+
+            if (count2.Count() == 0 && count.Count() == 0)
+                countWeb = 1;
 
             for (int i = 1; i <= countWeb; i++)
             {
-                if (driver.Url.EndsWith("html"))
+
+
+                if (url.EndsWith("html"))
                 {
-             
-                    driver.Url = driver.Url.Replace(".html", "," + i + ".html"); 
+                    var tymp = url.Replace(".html", "," + i + ".html");
+                    driver.Url = url.Replace(".html", "," + i + ".html"); 
                 }
                 else
                     driver.Url = url + i + ".html";
@@ -237,7 +253,7 @@ namespace OkazjeInfo
                 cookieList = getCookie();
             }
 
-            //var count = driver.FindElements(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/div[@class='wholePages']/a"));
+            var count = driver.FindElements(By.XPath("//div[@id='listingPageArea']/div[@id='listingPage']/div[@class='rightCol overflowH']/div[@class='yu']/div/a"));
 
             //if (countWeb != 1)
             //{
@@ -246,6 +262,10 @@ namespace OkazjeInfo
             //    else
             //        countWeb = count.Count + 1;
             //}
+
+
+            if (countWeb < Convert.ToInt16(count.FirstOrDefault()))
+                countWeb = count.Count;
 
             for (int j = 0; j < cookieList.Count; j++)
             {
@@ -263,10 +283,10 @@ namespace OkazjeInfo
                 for (int i = 1; i <= countWeb; i++)
                 {
 
-                    if (driver.Url.EndsWith("html"))
+                    if (url.EndsWith("html"))
                     {
 
-                        driver.Url = driver.Url.Replace(".html", "," + i + ".html");
+                        driver.Url = url.Replace(".html", "," + i + ".html");
                     }
                     else
                         driver.Url = url + i + ".html";
@@ -429,7 +449,8 @@ namespace OkazjeInfo
                 }
             }
 
-
+            if (q == null || q.Count() == 0)
+                tmp = driver.Url;
 
             var newLine2 = string.Format("{0};Produkty wielofertowe;{1}", tmp, countTmp);
             csvWrite.AppendLine(newLine2);
@@ -610,8 +631,8 @@ namespace OkazjeInfo
                             if (compareTrunk.Checked)
                             {
                                 driver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(120));
-
-                                tittle = checkShop(lista, url.Replace("www.okazje.info.pl", trunkUrl.Text), Convert.ToInt16(numericUpDown1.Value));
+                                var tmp = url.Replace("www.okazje.info.pl", trunkUrl.Text).Replace("okazje.info.pl",trunkUrl.Text);
+                                tittle = checkShop(lista, url.Replace("www.okazje.info.pl", trunkUrl.Text).Replace("okazje.info.pl", trunkUrl.Text), Convert.ToInt16(numericUpDown1.Value));
                                 lista = new List<string>();
                             }
 

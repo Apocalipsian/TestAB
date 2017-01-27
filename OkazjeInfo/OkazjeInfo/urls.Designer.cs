@@ -35,14 +35,15 @@
             this.lf = new System.Windows.Forms.Button();
             this.frazy = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mix = new System.Windows.Forms.Button();
+            this.katCity = new System.Windows.Forms.Button();
+            this.katProducer = new System.Windows.Forms.Button();
+            this.katShop = new System.Windows.Forms.Button();
             this.katCena = new System.Windows.Forms.Button();
             this.katTech = new System.Windows.Forms.Button();
             this.kat = new System.Windows.Forms.Button();
-            this.katProducer = new System.Windows.Forms.Button();
-            this.katShop = new System.Windows.Forms.Button();
-            this.katCity = new System.Windows.Forms.Button();
-            this.mix = new System.Windows.Forms.Button();
             this.rankingi = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numberOfRecords)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             // 
             this.numberOfRecords.Location = new System.Drawing.Point(774, 48);
             this.numberOfRecords.Maximum = new decimal(new int[] {
-            1000,
+            100000,
             0,
             0,
             0});
@@ -122,6 +123,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LISTINGI";
             // 
+            // mix
+            // 
+            this.mix.Location = new System.Drawing.Point(6, 212);
+            this.mix.Name = "mix";
+            this.mix.Size = new System.Drawing.Size(181, 23);
+            this.mix.TabIndex = 12;
+            this.mix.Text = "MIX";
+            this.mix.UseVisualStyleBackColor = true;
+            this.mix.Click += new System.EventHandler(this.mix_Click);
+            // 
+            // katCity
+            // 
+            this.katCity.Location = new System.Drawing.Point(6, 137);
+            this.katCity.Name = "katCity";
+            this.katCity.Size = new System.Drawing.Size(181, 23);
+            this.katCity.TabIndex = 11;
+            this.katCity.Text = "KAT + CITY";
+            this.katCity.UseVisualStyleBackColor = true;
+            this.katCity.Click += new System.EventHandler(this.katCity_Click);
+            // 
+            // katProducer
+            // 
+            this.katProducer.Location = new System.Drawing.Point(6, 168);
+            this.katProducer.Name = "katProducer";
+            this.katProducer.Size = new System.Drawing.Size(181, 23);
+            this.katProducer.TabIndex = 10;
+            this.katProducer.Text = "KAT + PROD";
+            this.katProducer.UseVisualStyleBackColor = true;
+            this.katProducer.Click += new System.EventHandler(this.katProducer_Click);
+            // 
+            // katShop
+            // 
+            this.katShop.Location = new System.Drawing.Point(6, 108);
+            this.katShop.Name = "katShop";
+            this.katShop.Size = new System.Drawing.Size(181, 23);
+            this.katShop.TabIndex = 9;
+            this.katShop.Text = "KAT + SHOP";
+            this.katShop.UseVisualStyleBackColor = true;
+            this.katShop.Click += new System.EventHandler(this.katShop_Click);
+            // 
             // katCena
             // 
             this.katCena.Location = new System.Drawing.Point(6, 79);
@@ -152,46 +193,6 @@
             this.kat.UseVisualStyleBackColor = true;
             this.kat.Click += new System.EventHandler(this.kat_Click);
             // 
-            // katProducer
-            // 
-            this.katProducer.Location = new System.Drawing.Point(6, 168);
-            this.katProducer.Name = "katProducer";
-            this.katProducer.Size = new System.Drawing.Size(181, 23);
-            this.katProducer.TabIndex = 10;
-            this.katProducer.Text = "KAT + PROD";
-            this.katProducer.UseVisualStyleBackColor = true;
-            this.katProducer.Click += new System.EventHandler(this.katProducer_Click);
-            // 
-            // katShop
-            // 
-            this.katShop.Location = new System.Drawing.Point(6, 108);
-            this.katShop.Name = "katShop";
-            this.katShop.Size = new System.Drawing.Size(181, 23);
-            this.katShop.TabIndex = 9;
-            this.katShop.Text = "KAT + SHOP";
-            this.katShop.UseVisualStyleBackColor = true;
-            this.katShop.Click += new System.EventHandler(this.katShop_Click);
-            // 
-            // katCity
-            // 
-            this.katCity.Location = new System.Drawing.Point(6, 137);
-            this.katCity.Name = "katCity";
-            this.katCity.Size = new System.Drawing.Size(181, 23);
-            this.katCity.TabIndex = 11;
-            this.katCity.Text = "KAT + CITY";
-            this.katCity.UseVisualStyleBackColor = true;
-            this.katCity.Click += new System.EventHandler(this.katCity_Click);
-            // 
-            // mix
-            // 
-            this.mix.Location = new System.Drawing.Point(6, 212);
-            this.mix.Name = "mix";
-            this.mix.Size = new System.Drawing.Size(181, 23);
-            this.mix.TabIndex = 12;
-            this.mix.Text = "MIX";
-            this.mix.UseVisualStyleBackColor = true;
-            this.mix.Click += new System.EventHandler(this.mix_Click);
-            // 
             // rankingi
             // 
             this.rankingi.Location = new System.Drawing.Point(692, 227);
@@ -202,11 +203,19 @@
             this.rankingi.UseVisualStyleBackColor = true;
             this.rankingi.Click += new System.EventHandler(this.rankingi_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(151, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(332, 20);
+            this.textBox1.TabIndex = 8;
+            // 
             // urls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 554);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.rankingi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.frazy);
@@ -241,5 +250,6 @@
         private System.Windows.Forms.Button katShop;
         private System.Windows.Forms.Button mix;
         private System.Windows.Forms.Button rankingi;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

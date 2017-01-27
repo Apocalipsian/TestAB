@@ -25,7 +25,14 @@ namespace OkazjeInfo
 
         public static bool checkView()
         {
+            
             Cookie cookie = driver.Manage().Cookies.GetCookieNamed("OIATM");
+            if (cookie == null)
+            {
+                driver.Navigate().Refresh();
+                cookie = driver.Manage().Cookies.GetCookieNamed("OIATM");
+            }
+
             if (cookie.Value.Last().ToString() == "0")
                 return false;
             else
@@ -37,23 +44,30 @@ namespace OkazjeInfo
         {
             var dataLayer = driver.FindElements(By.XPath("/html/head/script")).Select(w => w.GetAttribute("innerHTML")).Where(wa => wa.Contains("dataLayer"));
             string testID = "";
+            try
+            {
+                int p1 = dataLayer.FirstOrDefault().IndexOf("testId = '") + "testId = '".Length;
+                int p2 = dataLayer.FirstOrDefault().LastIndexOf("';\r\n");
 
-            int p1 = dataLayer.FirstOrDefault().IndexOf("testId = '") + "testId = '".Length;
-            int p2 = dataLayer.FirstOrDefault().LastIndexOf("';\r\n");
+                if (p1 > 0 && p2 > 0)
+                    testID = dataLayer.FirstOrDefault().Substring(p1, p2 - p1);
 
-            if (p1 > 0 && p2 > 0)
-                testID = dataLayer.FirstOrDefault().Substring(p1, p2 - p1);
-
+                int p3 = dataLayer.FirstOrDefault().IndexOf("'test_ab':'") + "'test_ab':'".Length;
+                var testVersion = dataLayer.FirstOrDefault()[p3 + 2];
+            }
+            catch { }
             return testID;
         }
 
         public static bool checkEvent()
         {
-
+            bool testEvent = false;
             var dataLayer = driver.FindElements(By.XPath("/html/head/script")).Select(w => w.GetAttribute("innerHTML")).Where(wa => wa.Contains("dataLayer"));
-
-            bool testEvent = dataLayer.FirstOrDefault().Contains(@"_gaq.push(['_setCustomVar', 1, 'TestAB', testId");
-
+            try
+            {
+                 testEvent = dataLayer.FirstOrDefault().Contains(@"_gaq.push(['_setCustomVar', 1, 'TestAB', testId");
+            }
+            catch { }
             return testEvent;
         }
 

@@ -58,5 +58,11 @@ namespace OkazjeInfo
             duplikaty multi = new duplikaty();
             multi.Show();
         }
+
+        private void fILTRYToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filtry filtry = new filtry();
+            filtry.Show();
+        }
     }
 }

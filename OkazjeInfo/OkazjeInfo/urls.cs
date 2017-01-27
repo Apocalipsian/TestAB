@@ -32,7 +32,7 @@ namespace OkazjeInfo
                                                             from redirection 
                                                             where source_url 
                                                             LIKE '%klaster.html' and redirection_insert > '" + DateTime.Today.AddDays(-30) +
-                                                             "' order by random() limit " + numberOfRecords.Value, master, urlsBox);
+                                                             "' order by random() limit " + numberOfRecords.Value, master, urlsBox,textBox1.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace OkazjeInfo
                                                             from redirection 
                                                             where source_url 
                                                             LIKE '%/lf/%' and redirection_insert > '" + DateTime.Today.AddDays(-30) +
-                                                             "' order by random() limit " + numberOfRecords.Value, master, urlsBox);
+                                                             "' order by random() limit " + numberOfRecords.Value, master, urlsBox, textBox1.Text);
         }
 
         private void frazy_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace OkazjeInfo
                                                 FROM phrases_rejected pr
                                                 WHERE phrase_date>now()-interval '1month') AS s
                                                 GROUP BY s.phrase_text
-                                                ORDER BY count(*) DESC limit " + numberOfRecords.Value, master,urlsBox);
+                                                ORDER BY count(*) DESC limit " + numberOfRecords.Value, master,urlsBox, textBox1.Text);
 
 
         }
@@ -77,7 +77,7 @@ namespace OkazjeInfo
                                                 and url not like '%promocje%' 
                                                 and url not like '%zakres%' 
                                                 and is_ranking is false  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace OkazjeInfo
                                                 and is_price = TRUE 
                                                 and url not like '%promocje%'  
                                                 and is_ranking is false  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
         }
 
         private void katShop_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace OkazjeInfo
                                                 and is_price = FALSE
                                                 and url not like '%promocje%'  
                                                 and is_ranking is false  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
 
         }
 
@@ -119,7 +119,7 @@ namespace OkazjeInfo
                                                 and filter is null
                                                 and url not like '%promocje%'  
                                                 and is_ranking is false  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
         }
 
         private void katProducer_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace OkazjeInfo
                                                 and is_price = FALSE
                                                 and url not like '%promocje%'  
                                                 and is_ranking is false  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
         }
 
         private void mix_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace OkazjeInfo
             urlsBox = methods.conncetDatabase(@"select replace(url,'kotreba-okazjemap.okazje.biuro','okazje.info.pl') 
                                                 from okazje_map  
                                                 where is_ranking is false 
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
         }
 
         private void katTech_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace OkazjeInfo
                                                 and filter is not null
                                                 and url not like '%promocje%'
                                                 and is_ranking is false
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
 
             
         }
@@ -173,7 +173,7 @@ namespace OkazjeInfo
                                                 and filter is null
                                                 and url not like '%promocje%'  
                                                 and is_ranking is true  
-                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox);
+                                                order by random() limit " + numberOfRecords.Value, devel, urlsBox, textBox1.Text);
 
         }
     }
