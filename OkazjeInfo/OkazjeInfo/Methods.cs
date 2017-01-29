@@ -93,9 +93,22 @@ namespace OkazjeInfo
         {
             box.Clear();
 
-            conn = new NpgsqlConnection(baza);
+//            conn = new NpgsqlConnection(baza);
             List<string> rekordy = new List<string>();
-            conn.Open();
+  //          conn.Open();
+
+            box.Clear();
+            try
+            {
+                conn = new NpgsqlConnection(baza);
+    //            List<string> rekordy = new List<string>();
+                conn.Open();
+            }
+            catch (System.Net.Sockets.SocketException e)
+            {
+                MessageBox.Show("Nie moszna polaczyc sie z baza");
+                return box;
+            }
 
             NpgsqlCommand cmd2 = new NpgsqlCommand(query, conn);
             try

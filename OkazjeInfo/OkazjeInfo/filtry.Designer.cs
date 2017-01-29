@@ -45,43 +45,43 @@
             this.shopBox = new System.Windows.Forms.CheckBox();
             this.techBox = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.countInter = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.usTestsGroupBox = new System.Windows.Forms.GroupBox();
-            this.Count_2 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Count_3 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Count_4 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Count_5 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Count_1 = new System.Windows.Forms.NumericUpDown();
-            this.combo1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.combo2 = new System.Windows.Forms.ComboBox();
-            this.combo3 = new System.Windows.Forms.ComboBox();
-            this.combo4 = new System.Windows.Forms.ComboBox();
-            this.combo5 = new System.Windows.Forms.ComboBox();
-            this.combo6 = new System.Windows.Forms.ComboBox();
-            this.Count_6 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.combo7 = new System.Windows.Forms.ComboBox();
             this.Count_7 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
+            this.combo6 = new System.Windows.Forms.ComboBox();
+            this.Count_6 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.combo5 = new System.Windows.Forms.ComboBox();
+            this.combo4 = new System.Windows.Forms.ComboBox();
+            this.combo3 = new System.Windows.Forms.ComboBox();
+            this.combo2 = new System.Windows.Forms.ComboBox();
+            this.Count_1 = new System.Windows.Forms.NumericUpDown();
+            this.combo1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Count_5 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Count_4 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Count_3 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Count_2 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.countInter = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.countInter)).BeginInit();
             this.usTestsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Count_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countInter)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -275,45 +275,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "RODZAJ TESTU";
             // 
-            // countInter
-            // 
-            this.countInter.Location = new System.Drawing.Point(807, 19);
-            this.countInter.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.countInter.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.countInter.Name = "countInter";
-            this.countInter.Size = new System.Drawing.Size(120, 20);
-            this.countInter.TabIndex = 7;
-            this.countInter.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(713, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ILOŚĆ ITERACJI";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(716, 44);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(321, 277);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
             // usTestsGroupBox
             // 
             this.usTestsGroupBox.Controls.Add(this.combo7);
@@ -344,305 +305,6 @@
             this.usTestsGroupBox.TabStop = false;
             this.usTestsGroupBox.Text = "WŁASNE SCENARIUSZE";
             // 
-            // Count_2
-            // 
-            this.Count_2.Location = new System.Drawing.Point(315, 49);
-            this.Count_2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_2.Name = "Count_2";
-            this.Count_2.Size = new System.Drawing.Size(53, 20);
-            this.Count_2.TabIndex = 15;
-            this.Count_2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(221, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "ILOŚĆ ITERACJI";
-            this.label1.Visible = false;
-            // 
-            // Count_3
-            // 
-            this.Count_3.Location = new System.Drawing.Point(314, 76);
-            this.Count_3.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_3.Name = "Count_3";
-            this.Count_3.Size = new System.Drawing.Size(53, 20);
-            this.Count_3.TabIndex = 17;
-            this.Count_3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_3.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(220, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "ILOŚĆ ITERACJI";
-            this.label3.Visible = false;
-            // 
-            // Count_4
-            // 
-            this.Count_4.Location = new System.Drawing.Point(315, 103);
-            this.Count_4.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_4.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_4.Name = "Count_4";
-            this.Count_4.Size = new System.Drawing.Size(53, 20);
-            this.Count_4.TabIndex = 19;
-            this.Count_4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_4.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(221, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "ILOŚĆ ITERACJI";
-            this.label4.Visible = false;
-            // 
-            // Count_5
-            // 
-            this.Count_5.Location = new System.Drawing.Point(314, 130);
-            this.Count_5.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_5.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_5.Name = "Count_5";
-            this.Count_5.Size = new System.Drawing.Size(53, 20);
-            this.Count_5.TabIndex = 21;
-            this.Count_5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_5.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(220, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "ILOŚĆ ITERACJI";
-            this.label5.Visible = false;
-            // 
-            // Count_1
-            // 
-            this.Count_1.Location = new System.Drawing.Point(315, 22);
-            this.Count_1.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_1.Name = "Count_1";
-            this.Count_1.Size = new System.Drawing.Size(53, 20);
-            this.Count_1.TabIndex = 24;
-            this.Count_1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // combo1
-            // 
-            this.combo1.FormattingEnabled = true;
-            this.combo1.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo1.Location = new System.Drawing.Point(24, 21);
-            this.combo1.Name = "combo1";
-            this.combo1.Size = new System.Drawing.Size(191, 21);
-            this.combo1.TabIndex = 22;
-            this.combo1.SelectedIndexChanged += new System.EventHandler(this.combo1_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "ILOŚĆ ITERACJI";
-            // 
-            // combo2
-            // 
-            this.combo2.FormattingEnabled = true;
-            this.combo2.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo2.Location = new System.Drawing.Point(24, 48);
-            this.combo2.Name = "combo2";
-            this.combo2.Size = new System.Drawing.Size(191, 21);
-            this.combo2.TabIndex = 25;
-            this.combo2.Visible = false;
-            this.combo2.SelectedIndexChanged += new System.EventHandler(this.combo2_SelectedIndexChanged);
-            // 
-            // combo3
-            // 
-            this.combo3.FormattingEnabled = true;
-            this.combo3.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo3.Location = new System.Drawing.Point(24, 75);
-            this.combo3.Name = "combo3";
-            this.combo3.Size = new System.Drawing.Size(190, 21);
-            this.combo3.TabIndex = 26;
-            this.combo3.Visible = false;
-            // 
-            // combo4
-            // 
-            this.combo4.FormattingEnabled = true;
-            this.combo4.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo4.Location = new System.Drawing.Point(24, 102);
-            this.combo4.Name = "combo4";
-            this.combo4.Size = new System.Drawing.Size(190, 21);
-            this.combo4.TabIndex = 27;
-            this.combo4.Visible = false;
-            // 
-            // combo5
-            // 
-            this.combo5.FormattingEnabled = true;
-            this.combo5.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo5.Location = new System.Drawing.Point(24, 129);
-            this.combo5.Name = "combo5";
-            this.combo5.Size = new System.Drawing.Size(191, 21);
-            this.combo5.TabIndex = 28;
-            this.combo5.Visible = false;
-            // 
-            // combo6
-            // 
-            this.combo6.FormattingEnabled = true;
-            this.combo6.Items.AddRange(new object[] {
-            "KLIK",
-            "KLIK - ODZNACZ",
-            "ZAZNACZ",
-            "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
-            "COFNIJ",
-            "KLIK W \'WYBRANE\'"});
-            this.combo6.Location = new System.Drawing.Point(24, 156);
-            this.combo6.Name = "combo6";
-            this.combo6.Size = new System.Drawing.Size(190, 21);
-            this.combo6.TabIndex = 31;
-            this.combo6.Visible = false;
-            // 
-            // Count_6
-            // 
-            this.Count_6.Location = new System.Drawing.Point(314, 157);
-            this.Count_6.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.Count_6.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_6.Name = "Count_6";
-            this.Count_6.Size = new System.Drawing.Size(53, 20);
-            this.Count_6.TabIndex = 30;
-            this.Count_6.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Count_6.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(220, 159);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "ILOŚĆ ITERACJI";
-            this.label7.Visible = false;
-            // 
             // combo7
             // 
             this.combo7.FormattingEnabled = true;
@@ -651,7 +313,7 @@
             "KLIK - ODZNACZ",
             "ZAZNACZ",
             "ODZNACZ",
-            "KLIK W \"WYBIERZ ZAZNACZONE\"",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
             "COFNIJ",
             "KLIK W \'WYBRANE\'"});
             this.combo7.Location = new System.Drawing.Point(24, 183);
@@ -693,6 +355,349 @@
             this.label8.Text = "ILOŚĆ ITERACJI";
             this.label8.Visible = false;
             // 
+            // combo6
+            // 
+            this.combo6.FormattingEnabled = true;
+            this.combo6.Items.AddRange(new object[] {
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo6.Location = new System.Drawing.Point(24, 156);
+            this.combo6.Name = "combo6";
+            this.combo6.Size = new System.Drawing.Size(190, 21);
+            this.combo6.TabIndex = 31;
+            this.combo6.Visible = false;
+            this.combo6.SelectedIndexChanged += new System.EventHandler(this.combo6_SelectedIndexChanged);
+            // 
+            // Count_6
+            // 
+            this.Count_6.Location = new System.Drawing.Point(314, 157);
+            this.Count_6.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_6.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_6.Name = "Count_6";
+            this.Count_6.Size = new System.Drawing.Size(53, 20);
+            this.Count_6.TabIndex = 30;
+            this.Count_6.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(220, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "ILOŚĆ ITERACJI";
+            this.label7.Visible = false;
+            // 
+            // combo5
+            // 
+            this.combo5.FormattingEnabled = true;
+            this.combo5.Items.AddRange(new object[] {
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo5.Location = new System.Drawing.Point(24, 129);
+            this.combo5.Name = "combo5";
+            this.combo5.Size = new System.Drawing.Size(191, 21);
+            this.combo5.TabIndex = 28;
+            this.combo5.Visible = false;
+            this.combo5.SelectedIndexChanged += new System.EventHandler(this.combo5_SelectedIndexChanged);
+            // 
+            // combo4
+            // 
+            this.combo4.FormattingEnabled = true;
+            this.combo4.Items.AddRange(new object[] {
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo4.Location = new System.Drawing.Point(24, 102);
+            this.combo4.Name = "combo4";
+            this.combo4.Size = new System.Drawing.Size(190, 21);
+            this.combo4.TabIndex = 27;
+            this.combo4.Visible = false;
+            this.combo4.SelectedIndexChanged += new System.EventHandler(this.combo4_SelectedIndexChanged);
+            // 
+            // combo3
+            // 
+            this.combo3.FormattingEnabled = true;
+            this.combo3.Items.AddRange(new object[] {
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo3.Location = new System.Drawing.Point(24, 75);
+            this.combo3.Name = "combo3";
+            this.combo3.Size = new System.Drawing.Size(190, 21);
+            this.combo3.TabIndex = 26;
+            this.combo3.Visible = false;
+            this.combo3.SelectedIndexChanged += new System.EventHandler(this.combo3_SelectedIndexChanged);
+            // 
+            // combo2
+            // 
+            this.combo2.FormattingEnabled = true;
+            this.combo2.Items.AddRange(new object[] {
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo2.Location = new System.Drawing.Point(24, 48);
+            this.combo2.Name = "combo2";
+            this.combo2.Size = new System.Drawing.Size(191, 21);
+            this.combo2.TabIndex = 25;
+            this.combo2.Visible = false;
+            this.combo2.SelectedIndexChanged += new System.EventHandler(this.combo2_SelectedIndexChanged);
+            // 
+            // Count_1
+            // 
+            this.Count_1.Location = new System.Drawing.Point(315, 22);
+            this.Count_1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_1.Name = "Count_1";
+            this.Count_1.Size = new System.Drawing.Size(53, 20);
+            this.Count_1.TabIndex = 24;
+            this.Count_1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // combo1
+            // 
+            this.combo1.FormattingEnabled = true;
+            this.combo1.Items.AddRange(new object[] {
+            "",
+            "KLIK",
+            "KLIK - ODZNACZ",
+            "ZAZNACZ",
+            "ODZNACZ",
+            "KLIK W \'WYBIERZ ZAZNACZONE\'",
+            "COFNIJ",
+            "KLIK W \'WYBRANE\'"});
+            this.combo1.Location = new System.Drawing.Point(24, 21);
+            this.combo1.Name = "combo1";
+            this.combo1.Size = new System.Drawing.Size(191, 21);
+            this.combo1.TabIndex = 22;
+            this.combo1.SelectedIndexChanged += new System.EventHandler(this.combo1_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(221, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "ILOŚĆ ITERACJI";
+            // 
+            // Count_5
+            // 
+            this.Count_5.Location = new System.Drawing.Point(314, 130);
+            this.Count_5.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_5.Name = "Count_5";
+            this.Count_5.Size = new System.Drawing.Size(53, 20);
+            this.Count_5.TabIndex = 21;
+            this.Count_5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_5.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(220, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "ILOŚĆ ITERACJI";
+            this.label5.Visible = false;
+            // 
+            // Count_4
+            // 
+            this.Count_4.Location = new System.Drawing.Point(315, 103);
+            this.Count_4.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_4.Name = "Count_4";
+            this.Count_4.Size = new System.Drawing.Size(53, 20);
+            this.Count_4.TabIndex = 19;
+            this.Count_4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_4.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(221, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "ILOŚĆ ITERACJI";
+            this.label4.Visible = false;
+            // 
+            // Count_3
+            // 
+            this.Count_3.Location = new System.Drawing.Point(314, 76);
+            this.Count_3.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_3.Name = "Count_3";
+            this.Count_3.Size = new System.Drawing.Size(53, 20);
+            this.Count_3.TabIndex = 17;
+            this.Count_3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_3.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(220, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "ILOŚĆ ITERACJI";
+            this.label3.Visible = false;
+            // 
+            // Count_2
+            // 
+            this.Count_2.Location = new System.Drawing.Point(315, 49);
+            this.Count_2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.Count_2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_2.Name = "Count_2";
+            this.Count_2.Size = new System.Drawing.Size(53, 20);
+            this.Count_2.TabIndex = 15;
+            this.Count_2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Count_2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(221, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "ILOŚĆ ITERACJI";
+            this.label1.Visible = false;
+            // 
+            // countInter
+            // 
+            this.countInter.Location = new System.Drawing.Point(807, 19);
+            this.countInter.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.countInter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.countInter.Name = "countInter";
+            this.countInter.Size = new System.Drawing.Size(120, 20);
+            this.countInter.TabIndex = 7;
+            this.countInter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(713, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "ILOŚĆ ITERACJI";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(716, 44);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(321, 277);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
             // filtry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -711,16 +716,16 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.countInter)).EndInit();
             this.usTestsGroupBox.ResumeLayout(false);
             this.usTestsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Count_6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Count_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countInter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
