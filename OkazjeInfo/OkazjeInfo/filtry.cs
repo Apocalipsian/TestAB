@@ -204,6 +204,9 @@ namespace OkazjeInfo
             return lists;
         }
 
+
+
+
         public void scenarios (string type, int count)
         {
 
@@ -227,8 +230,8 @@ namespace OkazjeInfo
                         metody.compareFilters(filtersCheck, driver);
                     }
 
-                    driver.Quit();
-                    filtersCheck.Clear();
+                   // driver.Quit();
+                     filtersCheck.Clear();
                 
             }
             #endregion
@@ -236,15 +239,14 @@ namespace OkazjeInfo
             #region SCENARIUSZ KLIK w "ZAZANCZONE"
             if (type =="KLIK W 'WYBIERZ ZAZNACZONE'")
             {
-                metody.clickResult(driver);
+
+                metody.clickCheck(driver);
             }
             #endregion
 
             #region SCENARIUSZ : ZAZNACZ
             if (type == "ZAZNACZ")
             {
-                
-                   
                     IWait<IWebDriver> wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30.00));
 
                     for (int i = 0; i < count; i++)
@@ -263,6 +265,21 @@ namespace OkazjeInfo
                 
             }
             #endregion
+
+            if(type == "COFNIJ")
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    IWait<IWebDriver> wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30.00));
+                 //   var clickCheck = driver.FindElement(By.XPath("//*[@id='selectChosenFilters']/div/div"));
+
+                    driver.Navigate().Back();
+                    //   wait.Until(ExpectedConditions.StalenessOf(clickCheck));
+                    Thread.Sleep(1000);
+                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+
+                }
+            }
 
         }
 
@@ -300,6 +317,13 @@ namespace OkazjeInfo
                 if (combo3.SelectedItem != null && combo3.SelectedItem.ToString() != "")
                     scenarios(combo3.SelectedItem.ToString(), Convert.ToInt16(Count_3.Value));
 
+                if (combo4.SelectedItem != null && combo4.SelectedItem.ToString() != "")
+                    scenarios(combo4.SelectedItem.ToString(), Convert.ToInt16(Count_4.Value));
+
+                if (combo5.SelectedItem != null && combo5.SelectedItem.ToString() != "")
+                    scenarios(combo5.SelectedItem.ToString(), Convert.ToInt16(Count_5.Value));
+
+                driver.Quit();
             }
 
 
