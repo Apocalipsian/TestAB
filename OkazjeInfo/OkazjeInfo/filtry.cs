@@ -204,7 +204,183 @@ namespace OkazjeInfo
             return lists;
         }
 
+        public List<unactiveFilters> getActiveFilters(IWebDriver driver)
+        {
+            unactiveFilters newFilter;
+            List<unactiveFilters> lists = new List<unactiveFilters>();
+            if (techBox.Checked == true)
+            {
 
+
+
+                try
+                {
+                    // do kliknięcia
+                    var tmp = driver.FindElements(By.XPath(@"//div[@class='filterSet']//div[contains(@class, 'box') and not (contains(@class, 'box color')) and not(contains(@class, 'showOnly')) 
+                                                                        and not(contains(@class, 'fs')) and not(contains(@class, 'producer'))and not(contains(@class, 'shop')) 
+                                                                        and not(contains(@class, 'shop'))and not(contains(@class, 'city'))and not(contains(@class, 'price'))]
+                                                                        /div[contains(@class, 'param')]//div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+                    // do zaznaczenia
+                    var tmp2 = driver.FindElements(By.XPath(@"//div[@class='filterSet']//div[contains(@class, 'box') and not(contains(@class,'box color')) and not(contains(@class, 'showOnly')) 
+                                                                        and not(contains(@class, 'fs')) and not(contains(@class, 'producer'))and not(contains(@class, 'shop')) and not(contains(@class, 'shop'))and not(contains(@class, 'city'))
+                                                                        and not(contains(@class, 'price'))]/div[contains(@class, 'param')]//div[contains(@class,'check') and contains(.//@name, 'param') and  (.//@checked)]"));
+
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp2[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+
+                }
+                catch
+                {
+                    //   MessageBox.Show("Nie mogłem pobrać filtrów FS.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            if (priceBox.Checked)
+
+            {
+                try
+                {
+                    var tmp = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'price')]//div/div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+                    var tmp2 = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'price')]//div//div[contains(@class,'check') and contains(.//@name, 'param') and  (.//@checked)]"));
+
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp2[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+                }
+                catch
+                {
+                    // MessageBox.Show("Nie mogłem pobrać filtrów FS.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            if (shopBox.Checked)
+            {
+                try
+                {
+                    var tmp = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'shop')]/div[contains(@class, 'param')]//div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+
+                }
+                catch
+                {
+                    // MessageBox.Show("Nie mogłem pobrać filtrów FS.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            if (showOnlyBox.Checked)
+            {
+                try
+                {
+                    var tmp = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'showOnly')]/div[contains(@class, 'param')]//div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+                    var tmp2 = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'showOnly')]/div[contains(@class, 'param')]//div[contains(@class,'check') and contains(.//@name, 'promotion') and  (.//@checked)]"));
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp2[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+
+                }
+                catch
+                {
+                    // MessageBox.Show("Nie mogłem pobrać filtrów promocji.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            if (producentBox.Checked)
+            {
+                try
+                {
+                    var tmp = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'producer')]/div[contains(@class, 'param')]//div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+                    var tmp2 = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'producer')]/div[contains(@class, 'param')]//div[contains(@class,'check') and contains(.//@name, 'param') and  (.//@checked)]"));
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp2[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+                }
+                catch
+                {
+                    // MessageBox.Show("Nie mogłem pobrać filtrów FS.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            if (cityBox.Checked)
+            {
+                try
+                {
+                    var tmp = driver.FindElements(By.XPath(@"//div[contains(@class, 'box') and contains(@class, 'city')]/div[contains(@class, 'param')]//div[@class='val']/label/a[not(@href='#') and (contains(@class, 'active'))]"));
+
+
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        newFilter = new unactiveFilters();
+                        newFilter.textFilter = tmp[i];
+                        newFilter.checkFilter = tmp[i];
+
+                        lists.Add(newFilter);
+                    }
+
+
+
+                }
+                catch
+                {
+                    //  MessageBox.Show("Nie mogłem pobrać filtrów FS.\nBłąd : {0}", e.Message);
+
+                }
+            }
+
+            return lists;
+        }
 
 
         public void scenarios (string type, int count)
@@ -236,11 +412,54 @@ namespace OkazjeInfo
             }
             #endregion
 
+            #region SCENARIUSZ : KLIK - ODZNACZ
+            if (type == "KLIK - ODZNACZ")
+            {
+
+                IWait<IWebDriver> wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30.00));
+
+                for (int i = 0; i < count; i++)
+                {
+                    filterList = null;
+
+
+                    metody.clickMore(driver);
+
+                    filterList = getActiveFilters(driver);
+
+                    filtersCheck.Add(metody.click(driver, filterList, -1));
+
+                    metody.compareFilters(filtersCheck, driver);
+                }
+
+                // driver.Quit();
+                filtersCheck.Clear();
+
+            }
+            #endregion
+
             #region SCENARIUSZ KLIK w "ZAZANCZONE"
             if (type =="KLIK W 'WYBIERZ ZAZNACZONE'")
             {
 
                 metody.clickCheck(driver);
+            }
+            #endregion
+
+            #region SCENARIUSZ : KLIK W WYBRANE
+            if (type == "KLIK W 'WYBRANE'")
+            {
+
+                IWait<IWebDriver> wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30.00));
+
+                for (int i = 0; i < count; i++)
+                {
+                    metody.clickResult(driver);
+                }
+
+                // driver.Quit();
+                filtersCheck.Clear();
+
             }
             #endregion
 
@@ -266,7 +485,30 @@ namespace OkazjeInfo
             }
             #endregion
 
-            if(type == "COFNIJ")
+            #region SCENARIUSZ : ODZNACZ
+            if (type == "ODZNACZ")
+            {
+                IWait<IWebDriver> wait = new OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(30.00));
+
+                for (int i = 0; i < count; i++)
+                {
+
+                    metody.clickMore(driver);
+
+                    filterList = getUnactiveFilters(driver);
+
+                    filtersCheck.Add(metody.check(driver, filterList, -1));
+                    Thread.Sleep(100);
+                }
+
+                filtersCheck.Clear();
+                filterList.Clear();
+
+            }
+            #endregion
+
+            #region cofnij
+            if (type == "COFNIJ")
             {
                 for (int i = 0; i < count; i++)
                 {
@@ -280,6 +522,8 @@ namespace OkazjeInfo
 
                 }
             }
+
+            #endregion
 
         }
 
@@ -322,6 +566,12 @@ namespace OkazjeInfo
 
                 if (combo5.SelectedItem != null && combo5.SelectedItem.ToString() != "")
                     scenarios(combo5.SelectedItem.ToString(), Convert.ToInt16(Count_5.Value));
+
+                if (combo6.SelectedItem != null && combo6.SelectedItem.ToString() != "")
+                    scenarios(combo6.SelectedItem.ToString(), Convert.ToInt16(Count_6.Value));
+
+                if (combo7.SelectedItem != null && combo7.SelectedItem.ToString() != "")
+                    scenarios(combo7.SelectedItem.ToString(), Convert.ToInt16(Count_7.Value));
 
                 driver.Quit();
             }

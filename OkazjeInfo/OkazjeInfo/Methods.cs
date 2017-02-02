@@ -644,7 +644,7 @@ namespace OkazjeInfo
 
         public void clickResult(IWebDriver driver)
         {
-            var clickCheck = driver.FindElements(By.XPath("//*[@id='yi']/div/h2"));
+            var clickCheck = driver.FindElements(By.XPath("//*[@id='yi']/div//label"));
 
             int number = rand.Next(0, clickCheck.Count - 1);
 
@@ -654,6 +654,9 @@ namespace OkazjeInfo
             try
             {
                 clickCheck[number].Click();
+                wait.Until(ExpectedConditions.StalenessOf(clickCheck[number]));
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+
             }
             catch (Exception e)
             {
